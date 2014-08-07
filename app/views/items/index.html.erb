@@ -1,0 +1,6 @@
+<% @items.each do |item| %>
+  <li>
+    <%= item.description %>
+    <small>Requested by <%= item.created_by.username %></small>
+  </li>
+<% end -%>
