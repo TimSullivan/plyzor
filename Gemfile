@@ -24,6 +24,7 @@ gem 'bootstrap-sass-extras'
 gem 'tzinfo-data'
 gem 'validates_formatting_of'
 gem 'rails_12factor'
+
 group :development do
   gem 'better_errors'
 end
