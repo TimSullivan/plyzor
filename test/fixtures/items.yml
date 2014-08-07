@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  created_by: 1
+  description: MyString
+  quantity: 1.5
+  completed_at: 2014-08-07 20:03:18
+
+two:
+  user_id: 
+  created_by: 1
+  description: MyString
+  quantity: 1.5
+  completed_at: 2014-08-07 20:03:18
