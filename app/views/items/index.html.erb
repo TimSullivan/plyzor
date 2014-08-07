@@ -1,6 +1,20 @@
-<% @items.each do |item| %>
-  <li>
-    <%= item.description %>
-    <small>Requested by <%= item.created_by.username %></small>
-  </li>
-<% end -%>
+<div class='items'>
+  <div class='row'>
+    <div class='col-md-5'>
+      <% @items.each do |item| %>
+        <div class="item checkbox">
+          <div class='username-container pull-right'>
+            <span class='label label-success'><%= item.user.username %></span>
+          </div>
+          <h3>
+            <input type="checkbox"> <%= item.description %>
+          </h3>
+          <p class="help-block">
+            Requested by <%= item.created_by.username %>
+          </p>
+          
+        </div>
+      <% end -%>
+    </div>
+  </div>
+</div>
