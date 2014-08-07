@@ -1,4 +1,6 @@
 class CallbackController < ApplicationController
+  skip_before_filter :verify_authenticity_token
+  
   def slack
     @user_name = params[:user_name]
     @text = params[:text]
