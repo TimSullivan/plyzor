@@ -9,11 +9,13 @@ class ItemsController < ApplicationController
     @item.update_attributes item_params
   end
 
-  def assign_to
+  def assign
     @item = Item.find params[:id]
     @user = User.find_by_username params[:username]
-    @item.user = @user
-    @saved = @item.save
+    if @user
+      @item.user = @user
+      @saved = @item.save
+    end
   end
 
   private

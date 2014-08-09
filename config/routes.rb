@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   post '/slack/webhook' => 'callback#slack'
-  resources :items
+  resources :items do
+    post 'assign', on: :member
+  end
 
   devise_for :users, controllers: {registrations: "users/registrations", sessions: "users/sessions", passwords: "users/passwords"}, skip: [:sessions, :registrations]
   devise_scope :user do
