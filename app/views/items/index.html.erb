@@ -7,15 +7,11 @@
     </div>
     <div class='col-md-5'>
       <div class='completed'>
-        <div class='row'>
-          <div class='col-md-5'>
-            <ul id='completed-list'>
-              <% @recent_completed_items.each do |item| %>
-                <%= render partial: 'completed', object: item %>
-              <% end -%>
-            </ul>
-          </div>
-        </div>
+        <ul id='completed-list'>
+          <% @recent_completed_items.each do |item| %>
+            <%= render partial: 'completed', object: item %>
+          <% end -%>
+        </ul>
       </div>      
     </div>
   </div>
