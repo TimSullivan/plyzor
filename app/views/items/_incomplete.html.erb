@@ -1,0 +1,31 @@
+<div class="item checkbox">
+  <div class='username-container pull-right'>
+    <div class="btn-group">
+      <button class="btn btn-success btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+        <%= incomplete.user.username %> <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#">Assign to:</a></li>
+        <li role="presentation" class="divider"></li>
+        <% User.all.each do |user| %>
+          <li><a href="#"><%= user.username %></a></li>
+        <% end -%>
+      </ul>
+    </div>
+
+  </div>
+
+  <%= form_for incomplete, remote: true do |f| %>
+    <h3>
+      <%= f.check_box :complete %>
+      <%= incomplete.description %>
+
+      <%#= link_to "(remove)", task, method: :delete, data: {confirm: "Are you sure?"}, remote: true %>
+    </h3>
+    
+  <% end %>
+  <p class="help-block">
+    Requested by <%= incomplete.created_by.username %>
+  </p>
+  
+</div>

@@ -4,7 +4,7 @@
   .item {
     padding: 3px 5px;
     &:hover {
-      background-color: darken($body-bg, 10%);
+      background-color: darken($body-bg, 5%);
     }
   }
   .username-container {
@@ -16,5 +16,15 @@
   }
   p {
     margin: 0;
+  }
+}
+
+.completed {
+  ul {
+    padding: 0;
+  }
+  li {
+    list-style-type: none;
+    text-decoration: line-through;
   }
 }

@@ -4,4 +4,16 @@ class Item < ActiveRecord::Base
 
   scope :incomplete, -> { where('completed_at is null') }
 
+  def complete
+    self.completed_at != nil
+  end
+
+  def complete=(is_complete)
+    if is_complete && self.completed_at.nil?
+      self.completed_at = Time.now
+    elsif not is_complete
+      self.completed_at = nil
+    end
+  end
+
 end
