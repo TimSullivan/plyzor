@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @items = Item.incomplete
     @recent_completed_items = Item.where('completed_at > ?', 4.days.ago).order('completed_at desc')
