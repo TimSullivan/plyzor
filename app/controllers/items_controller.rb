@@ -9,6 +9,7 @@ class ItemsController < ApplicationController
   def update
     @item = Item.find params[:id]
     @item.update_attributes item_params
+    @item.update_column :completed_by_user_id, current_user.id if @item.complete
   end
 
   def assign
