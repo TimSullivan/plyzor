@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :cypher
+
   post '/slack/webhook' => 'callback#slack'
   resources :items do
     post 'assign', on: :member

@@ -1,5 +1,5 @@
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap
 //= require items
+//= require cypher
