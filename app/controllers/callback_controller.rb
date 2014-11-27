@@ -9,10 +9,10 @@ class CallbackController < ApplicationController
     @text.slice! @trigger_word
 
     user = User.find_by_username @user_name
-    linda = User.find_by_username 'chronologist'
+    caron = User.find_by_username 'caron'
 
     item = Item.new
-    item.user = linda
+    item.user = caron
     item.created_by = user
     item.description = @text
     item.save!
